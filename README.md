@@ -12,17 +12,17 @@ sudo docker build -t addi-assesment .
 ```
 Run the bash file "run.sh"  
 ```bash
-- bash run.sh  
+bash run.sh  
 ```
 Open the docker's bash:  
 ```bash
-- sudo docker exec -it addi-app /bin/bash  
+sudo docker exec -it addi-app /bin/bash  
 ```
 Alternatively use the more friendly bash file:  
 ```bash
-- bash enter_docker_bash.sh  
+bash enter_docker_bash.sh  
 ```
 Inside the docker's bash you're placed in a folder containing the necessary bash file with the commands to run the app:  
 ```bash
-- bash run_flask.sh  
+bash run_flask.sh  
 ```
