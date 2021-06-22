@@ -1,6 +1,6 @@
 # SE-technical-challenge
 Esta es una aplicación de Flask (python) que corre junto a una base de datos de postgreSQL con datos aleatorios en un contenedor docker.
-A partir de este código fuente se puede construir la imagen docker.
+Apartir de este código fuente se puede construir la imagen docker.
 ## Reto técnico
 Nuestro equipo de ventas le ha pedido a nuestro equipo de ingeniería de soporte la configuración de un proceso pre-establecido para integrar un nuevo aliado a nuestra plataforma. Este proceso requiere añadir nuevos registros a una base de datos SQL y usar un endpoint de nuestra plataforma.   
 
@@ -28,7 +28,7 @@ Se deberá crear el código necesario para realizar una request HTTP que sea reu
 ### Consideraciones técnicas:
 * Se espera que corra la aplicación en máquina local usando docker
 * Esperamos que construya queries SQL utilizando las funciones de manejo de datos json. Puede usar herramientas de gestión de bases de datos como DBeaver
-* Puede usar cualquier herramienta o lenguaje de programación para realizar resquests HTTP a la API. Por ejemplo Postman, CURL o la librería requests de javascript
+* Puede usar cualquier herramienta o lenguaje de programación para realizar resquests HTTP a la API. Por ejemplo Postman, CURL, wget o lenguajes de programación.
 * Esperamos un archivo README describiendo el proceso general y los pasos para desarrollarlo usando los recursos creados durante el proceso (queries, requests a API). Esto con la idea de que sea usado para futura referencia y que sea un documento fácil de seguir por otra persona.
 * No esperamos que publiques la aplicación en el internet público
   
