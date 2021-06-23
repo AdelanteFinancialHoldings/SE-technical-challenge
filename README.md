@@ -1,6 +1,6 @@
 # SE-technical-challenge
 Esta es una aplicación de Flask (python) que corre junto a una base de datos de postgreSQL con datos aleatorios en un contenedor docker.
-Apartir de este código fuente se puede construir la imagen docker.
+A partir de este código fuente se puede construir la imagen docker.
 ## Reto técnico
 Nuestro equipo de ventas le ha pedido a nuestro equipo de ingeniería de soporte la configuración de un proceso pre-establecido para integrar un nuevo aliado a nuestra plataforma. Este proceso requiere añadir nuevos registros a una base de datos SQL y usar un endpoint de nuestra plataforma.   
 
