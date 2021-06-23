@@ -6,32 +6,47 @@ Nuestro equipo de ventas le ha pedido a nuestro equipo de ingeniería de soporte
 
 El proceso consiste de:  
 
-Se necesita construir un script SQL que permita agregar una nueva fila a la tabla "stores". Se debe también construir un script SQL que permita consultar los datos de un aliado dado cierto id
 
- - Datos:
+1. Insertar manualmente la siguiente información a la tabla ```stores``` usando un script SQL:
+```
+Data:
   1. id: 1234567890
   2. name: Aliado ADDI
-  3. tags: Tecnología, información, finanzas
+  3. tags: tecnologia, informacion, finanzas
   4. brand: Merchant
-  5. descuento: 5
-  6. Monto máximo: 150
-  7. Monto mínimo: 20
+  5. discount: 5
+  6. maxAmount: 150
+  7. minAMount: 20
   8. credentials: null
+```
+2. Construir una consulta SQL que permita encontrar aquellos aliados que tienen el tag ```finanzas```
 
-Dado que las credenciales usadas para la comunicación con nuestro aliado son información sensible, se debe realizar un proceso de encriptación de las mismas. Este proceso se puede realizar haciendo una request HTTP a nuestra API la cual recibe los datos necesarios y agrega las credenciales en la tabla de stores. La documentación de los endpoints se puede encontrar adjunto a este archivo.
+3. Construir un request HTTP que agregue las credenciales del aliado a través de nuestro API.
 
-Se deberá crear el código necesario para realizar una request HTTP que sea reutilizable y permita cambiar los parámetros de la request a necesidad. Puede usar cualquier lenguaje de programación, herramientas de línea de comandos como wget y curl ó herramientas gráficas como postman generando un archivo de collección de postman.
- - Las credenciales a añadir para este nuevo aliado son:
-  1. username: aliado_addi
-  2. password: }sxh7_5}BdJ4K:Qf
+--- 
+Dado que las credenciales usadas para la comunicación con nuestro aliado son información sensible, se debe realizar un proceso de encriptación de las mismas. Este proceso se puede realizar haciendo una request HTTP a nuestra API la cual recibe los datos necesarios y agrega las credenciales en la tabla de stores. La documentación de los endpoints se puede encontrar adjunto a este archivo. 
 
+---
+
+Las credenciales a añadir para este nuevo aliado son:
+```
+username: aliado_addi
+password: }sxh7_5}BdJ4K:Qf
+```
 ### Consideraciones técnicas:
 * Se espera que corra la aplicación en máquina local usando docker
 * Esperamos que construya queries SQL utilizando las funciones de manejo de datos json. Puede usar herramientas de gestión de bases de datos como DBeaver
 * Puede usar cualquier herramienta o lenguaje de programación para realizar resquests HTTP a la API. Por ejemplo Postman, CURL, wget o lenguajes de programación.
 * Esperamos un archivo README describiendo el proceso general y los pasos para desarrollarlo usando los recursos creados durante el proceso (queries, requests a API). Esto con la idea de que sea usado para futura referencia y que sea un documento fácil de seguir por otra persona.
 * No esperamos que publiques la aplicación en el internet público
-  
+
+### Entregables:
+- Script SQL que permita agregar un nuevo aliado.
+- Consulta SQL para listar todos aquellos aliados que tienen el tag "finanzas"
+- Request HTTP que agrega las credenciales a través de nuestro API
+- Un README a manera de runbook explicando como realizar el proceso.
+- Estos archivos los esperamos recibir en un repositorio GITHUB privado.
+
 ## ¿Cómo iniciar la aplicación en entorno local?
 Para correr esta aplicación en un entorno local se deben cumplir los siguientes requisitos:
 
