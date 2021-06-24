@@ -89,7 +89,13 @@ Para detener la aplicación se puede usar desde una terminal diferente:
 sudo docker stop addi-app
 sudo docker system prune
 ```
-
+### Cómo conectarse a la base de datos
+Las credenciales para conectarse a la base de datos desplegada en el entorno local son:
+```
+- host: localhost:5432
+- database: postgres
+- password: 1234
+```
 
 ## Especificación de los endpoint de la API:
 La api al iniciarse con el comando run_flash.sh realiza lo siguiente:
