@@ -89,7 +89,13 @@ To stop the application this commands can be used from a different terminal:
 sudo docker stop addi-app
 sudo docker system prune
 ```
-
+### How to connect to the database
+The credentials for the locally deployed database are:
+```
+- host: localhost:5432
+- database: postgres
+- password: 1234
+```
 
 ## API endpoint specification:
 The API, when started with the run_flash.sh command, does the following:
