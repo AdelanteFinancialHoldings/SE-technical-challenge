@@ -115,7 +115,7 @@ allyId(path): string identification for an ally.
 
 Payload(body): json object, example
 {
-	"user": "addi",
+	"username": "addi",
 	"password": "123456"
 }
 
