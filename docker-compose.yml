@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  flask_app:
+    container_name: addi_app
+    image: dockerhub-flask_live_app:1.0.0
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - DB_URL=postgresql://postgres:postgres@flask_db:5432/postgres
+      - FLASK_APP=app/challenge_app
+    depends_on:
+      flask_db:
+        condition: service_healthy
+  flask_db:
+    container_name: flask_db
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./scripts/db/seed.sql:/docker-entrypoint-initdb.d/seed.sql

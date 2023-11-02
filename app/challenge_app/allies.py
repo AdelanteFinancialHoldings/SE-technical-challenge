@@ -7,7 +7,6 @@ from .db import get_db
 bp = Blueprint('allies', __name__, url_prefix='/allies')
 
 
-
 @bp.route('/')
 def index():
     return "Support engineer technical challenge API"
@@ -58,6 +57,7 @@ def credentials(allyId):
 @bp.errorhandler(400)
 def not_found(error):
     return jsonify(message=str(error), status=400), 400
+
 @bp.errorhandler(404)
 def url_not_found(error):
     return jsonify(message=str(error), status=404), 404
