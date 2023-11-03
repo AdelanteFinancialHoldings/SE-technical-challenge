@@ -1,8 +1,6 @@
 import psycopg2
 import psycopg2.extras
-import click
-from flask import current_app, g
-from flask.cli import with_appcontext
+from flask import g
 
 def get_db():
     if 'db' not in g:
