@@ -32,3 +32,4 @@ def create_app(test_config=None):
         return "<p>You have succesfully deployed the app in your local environment!</p> <p>Remember that the endpoint URL is on the /allies address</p>"
 
     return app
+app = create_app()
