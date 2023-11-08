@@ -6,16 +6,17 @@ import uuid
 fake = Faker()
 
 # List of available tags
+tag_titles = ["tag1", "tag2", "tag3"]
 tags = ["finanzas", "tecnologia", "ropa", "apparel", "movilidad", "belleza", "hogar", "desportes", "educacion"]
 
 print(f'/**Create stores table and add 100 rows of random data****/')
 print(f'DROP TABLE IF EXISTS stores;')
 print(f'CREATE TABLE stores(id VARCHAR,PRIMARY KEY(id),data JSON);')
 
-for _ in range(200):
+for _ in range(300):
     store_id = str(uuid.uuid4())
     store_name = fake.company()
-    selected_tags = random.sample(tags, 3)
+    selected_tags = dict(zip(tag_titles, random.sample(tags, 3)))
     brand_owner = fake.name()
     discount = round(random.uniform(1.5, 99.9), 1)  
     min_amount = random.randint(0, 10)

@@ -16,14 +16,13 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - ./scripts/db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+      - ./extra/db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
   flask_app:
     container_name: addi_app
     build: .
     ports:
       - "4000:4000"
     environment:
-      - DB_URL=postgresql://postgres:postgres@addi_db:5432/postgres
       - FLASK_APP=./app/challenge_app/__init__.py
       - FLASK_DEBUG=1
     depends_on:
