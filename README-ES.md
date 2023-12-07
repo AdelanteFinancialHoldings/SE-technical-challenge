@@ -79,7 +79,7 @@ Las credenciales para la base de datos implementada localmente son:
 La api al iniciarse con el comando run_flash.sh realiza lo siguiente:
 - Iniciar la aplicación.
 - Poblar la base de datos con datos aleatorios.
-- Empieza a escuchar requests en la dirección 127.0.0.1:5000
+- Empieza a escuchar requests en la dirección 127.0.0.1:4000
 ### Endpoint: credentials
 ```
 POST /allies/{allyId}/credentials
